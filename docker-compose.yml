@@ -1,0 +1,9 @@
+version: "2.1"
+services:
+  frps:
+    image: snowdreamtech/frps
+    network_mode: host
+    volumes:
+      - ./config:/etc/frp
+      - ./log:/frps_log
+    restart: always
